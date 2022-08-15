@@ -1,0 +1,270 @@
+*{
+ padding: 0;
+ margin: 0;
+ /*  */
+ box-sizing: border-box;
+}
+/* 
+vị trí
+kích thước
+màu sắc
+kiểu dáng(kiểu chữ, tròn vuông )
+
+từ ngoài vào trong
+làm từ trên xuống dưới
+tổng quan đến chi tiếtg
+*/
+.clear{
+    clear: both;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+
+}
+/* header */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background-color: black;
+    /* chỉnh cho header nổi lên trên */
+    z-index: 1;
+}
+
+    #nav{
+        display: inline-block;
+    }
+    #nav, .subnav{
+        /* bỏ dấu . trong list */
+        list-style-type:none ;
+    }
+    #nav>li{
+        /* làm cho danh sách ở trên 1 hàng */
+    display: inline-block;
+    position: relative;
+    }
+    #nav>li>a{
+        /* viết hoa hết */
+        text-transform: uppercase;
+        /* chỉ có a trong li trong nav bị ảnh hưởng */
+        color: white;
+    }
+    #nav li a{
+    
+        /* bỏ gạch chân */
+        text-decoration: none;
+        /* căn giữa chũ */
+        line-height: 48px;
+        padding: 0 24px;
+        display:  block;
+        position: relative;
+    }
+    #nav .subnav li:hover a,#nav >li:hover> a{
+        background-color: #ccc;
+        color: black;
+    }
+
+    #nav .subnav{
+        min-width: 160px;
+        position: absolute ;
+        background-color: white;
+        /* bóng đổ */
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        display: none;
+    }
+    #nav .subnav:hover{
+        display: block;
+    }
+
+    #nav .subnav a{
+        color: black;
+        padding: 0 12px;
+        line-height: 38px;
+        
+    }
+    #nav li:hover .subnav{
+        display: block;
+    }
+    #header .search_btn{
+        color: white;
+        font-size: 20px;
+        float: right;
+        padding:0 25px;
+        line-height: 48px;
+    }
+    #header .search_btn:hover{
+        /* con trỏ chuột thành ngón tay */
+        cursor: pointer;
+        background-color: orangered;
+    }
+/* slider */
+#slider{
+    
+    position: relative;
+    margin-top: 48px;
+    padding-top: 50%;
+    background-color: #333;
+    background-image: url(/asset/img/chicago.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    #slider #slider_text{
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
+        bottom: 0;
+        position: absolute;
+        padding: 48px;
+        width: 100%;
+    }
+    #slider #slider_text #slider_header{
+        font-weight: 600;
+    }
+    #slider #slider_text #slider_p{
+        font-weight: 400;
+    }
+
+/* content */
+#content{
+   
+    margin: 0 auto;
+}
+#content #about{
+    width: 800px;
+    margin: 0 auto;
+}
+    #content .content_header{
+        text-align: center;
+        padding-top: 74px;
+        letter-spacing: 4px;
+    }
+    #content .content_slogan{
+        opacity: 0.6;
+        font-style: italic;
+        padding-top: 15px;
+        text-align: center;
+    }
+    #content #content_p{
+        padding-top: 15px;
+      padding-top: 15px;
+      text-align: justify;
+    }
+    #content #member_list{
+        padding-top: 32px;
+    }
+    #content .member{
+        text-align: center;
+        float: left;
+        width: 33.33333%;
+    }
+    #content .member_name{
+        padding: 15px 0;
+    }
+    #content .member_image{
+        width: 150px;
+        border-radius: 4px;
+
+    }
+/* tourdates */
+    .tour_dates_dad{
+        margin-top: 64px;
+        width: 100vw;
+        background-color: black;
+        color: white;
+        padding-bottom: 64px;
+    }
+    .tour_dates_dad span{
+        background-color: orangered;
+        color: white;
+        padding: 4px;
+        margin-left: 8px;
+    }
+    .tour_dates_dad #ticket_month_3{
+        background-color: black;
+        border-radius: 50%;
+        float: right;
+        margin-top: 8px;
+        margin-right: 8px;
+        line-height:20px;;
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+    }
+    .tour_dates_dad .ticket_month{
+        padding-top: 30px;
+        line-height: 40px;
+    }
+    .tour_dates_dad .ticket_month li{
+        border-bottom:1px solid rgb(219, 211, 211) ;
+        font-weight: 500;
+        padding-left: 10px;
+        width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        color: black;
+    }
+    .tour_img{
+        padding: 24px -8px 0px -8px;
+        width: 800px;
+        margin: 0 auto;
+    }
+    .tour_img a{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 8px 16px;
+        margin: 12px 0px;
+    }
+    .tour_img h3{
+        padding: 12px 0;
+    }
+    .tour_img .tour_place_date{
+        opacity: 0.7;
+    }
+    .tour_img .tour_place_descript{
+        padding: 12px 0;
+    }
+    .tour_img .tour_img_content{
+        padding: 12px;
+        background-color: white;
+        color: #000;
+    }
+    .tour_img img{
+       width: 100%;
+    }
+    .tour_img img:hover{
+        opacity: 0.6;
+    }
+    .tour_img .tour_place{
+
+        padding: 8px;
+        float: left;
+        width: 33.33333%;
+    }
+/* contact */
+/* map */
+#map{
+    margin-top: 128px;
+}
+#footer{
+    font-size: 16px;
+    padding: 64px;
+text-align: center;
+
+}
+#footer i{
+    padding: 2px;
+}
+#footer i:hover{
+    opacity: 0.6;
+    cursor: pointer;
+
+}
+#footer p{
+    padding-top: 16px;
+    opacity: 0.6;
+}
